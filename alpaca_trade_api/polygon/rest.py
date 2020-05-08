@@ -24,7 +24,7 @@ class REST(object):
         self._session = requests.Session()
 
     def _request(self, method, path, params=None, version='v1'):
-        url = 'https://api.polygon.io/' + version + path
+        url = 'https://data.alpaca.markets/v1' + path
         params = params or {}
         params['apiKey'] = self._api_key
         if self._staging:
